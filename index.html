@@ -28,7 +28,7 @@
   @media (max-width:760px) { nav a:not(.call) { display:none; } }
 
   .hero { position:relative; color:#fff; min-height:min(86vh,780px); display:flex; align-items:center; background:#0b0b0b; overflow:hidden; }
-  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:3/2; max-width:100%; background:url(media/hero-fsp-jason2.jpg) 62% center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
+  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:3/2; max-width:100%; background:url(media/hero-fsp-jason3.jpg) 62% center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
   .hero .wrap { z-index:1; }
   @media (max-aspect-ratio:3/2) { .hero::after { left:0; width:100%; aspect-ratio:auto; -webkit-mask-image:none; mask-image:none; } }
   .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 60%); z-index:1; }
@@ -116,6 +116,26 @@
   .contact p { color:#cfcfcf; max-width:54ch; margin:0 auto 26px; }
   footer { text-align:center; font-size:13px; color:var(--soft); padding:22px 0 40px; }
   @media (max-width:560px) { th, td { padding:10px 7px; font-size:14px; } }
+  .custom { color:#fff; }
+  .custom-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+  .checks { list-style:none; padding:0; margin:18px 0 26px; } .checks li { padding:6px 0 6px 30px; position:relative; } .checks li:before { content:"\2713"; position:absolute; left:0; color:var(--yellow); font-weight:900; }
+  .custom-demo { display:flex; gap:22px; justify-content:center; perspective:900px; }
+  .runner { width:120px; height:420px; background:#151515 repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 2px, transparent 2px 5px); border-radius:6px; box-shadow:0 30px 60px rgba(0,0,0,.6), inset 0 0 0 1px #2a2a2a; display:flex; align-items:center; justify-content:center; transform:rotateX(18deg); }
+  .runner span { writing-mode:vertical-rl; transform:rotate(180deg); font-weight:900; font-size:30px; letter-spacing:.04em; color:#fff; white-space:nowrap; }
+  .runner.y span { color:var(--yellow); font-size:24px; }
+  @media (max-width:860px) { .custom-grid { grid-template-columns:1fr; } .runner { height:300px; width:96px; } .runner span { font-size:22px; } .runner.y span { font-size:18px; } }
+  /* photo backgrounds (Slab & Cork style) */
+  body { background:#f4f2ee linear-gradient(rgba(244,242,238,.9), rgba(244,242,238,.93)), url(media/bg-jobsite.jpg) center/cover fixed; background-blend-mode:normal; }
+  body { background-image:linear-gradient(rgba(244,242,238,.9), rgba(244,242,238,.93)), url(media/bg-jobsite.jpg); background-size:cover; background-position:center; background-attachment:fixed; }
+  .proof { background:linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.94)), url(media/bg-rubber-paint.jpg) center/cover !important; }
+  .custom { background:#0d0d0d linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.55) 100%), url(media/bg-rubber-paint.jpg) left center/cover fixed; }
+  .custom { background-image:linear-gradient(270deg, rgba(10,10,10,.9) 0%, rgba(10,10,10,.45) 100%), url(media/bg-rubber-paint.jpg); background-size:cover; background-position:left center; background-attachment:fixed; }
+  .uses { background-image:linear-gradient(rgba(12,12,12,.82), rgba(12,12,12,.9)), url(media/bg-jobsite.jpg) !important; background-size:cover !important; background-position:center !important; background-attachment:fixed !important; }
+  .weight, .card, .faq details, table { box-shadow:0 10px 30px rgba(0,0,0,.08); }
+  @media (max-width:860px) { body, .custom, .uses { background-attachment:scroll !important; } }
+  .custom .lede { color:#e2e2e2; }
+  .hero h1, .hero p, .hero .hero-facts { text-shadow:0 2px 12px rgba(0,0,0,.85); }
+  @media (max-width:1500px) { .hero::before { background:linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,0) 70%); } }
 </style>
 </head>
 <body>
@@ -130,7 +150,7 @@
   <p class="punch">No drips. No slips. No leaks.</p>
   <p>Heavy EPDM rubber runners and drop cloths. Lies flat, grips the floor, nothing soaks through, and it wipes clean job after job.</p>
   <a class="btn" href="#pricing">See pricing</a><a class="btn ghost" href="#order">Order / pickup</a>
-  <div class="hero-facts"><span>2' x 10' runners</span><span>10' x 10' drop cloths</span><span>Pro .045 &amp; Heavy Duty .060</span><span>York, PA pickup</span></div>
+  <div class="hero-facts"><span>2' x 10' runners</span><span>10' x 10' drop cloths</span><span>Pro .045 &amp; Heavy Duty .060</span><span>York, PA pickup</span><span>Call for shipping</span><span>Your company name printed on it</span></div>
 </div></div>
 
 <section id="weights"><div class="wrap">
@@ -167,6 +187,19 @@
     <div class="card"><span class="size">5 + 2</span><h3>Contractor Kit</h3>
       <p>Five runners and two 10' x 10' drops. Enough to protect a whole interior job from the front door to the back room.</p>
       <div class="pp"><div><small>Pro .045</small><b>$449.98</b><span>84 lb</span></div><div class="hd"><small>Heavy Duty .060</small><b>$559.98</b><span>111 lb</span></div></div></div>
+  </div>
+</div></section>
+
+<section class="custom" id="custom"><div class="wrap">
+  <div class="custom-grid">
+    <div>
+      <span class="tag">Custom printed</span>
+      <h2>Put your company name on it</h2>
+      <p class="lede">Your business name, logo or website printed right down the runner. Every homeowner who walks your runner sees who's protecting their floors, and it comes back to the shop instead of walking off with the next crew.</p>
+      <ul class="checks"><li>Your name or website in white or yellow</li><li>Runners, drops and full contractor kits</li><li>Small runs for one crew, big runs for a whole company</li></ul>
+      <a class="btn" href="tel:+17175775300">Call about custom names</a>
+    </div>
+    <div class="custom-demo" aria-hidden="true"><div class="runner"><span>RoofShieldPro.com</span></div><div class="runner y"><span>YOUR COMPANY NAME</span></div></div>
   </div>
 </div></section>
 
@@ -212,7 +245,7 @@
       <tr><td>Contractor kit (5 runners + 2 drops)</td><td class="r"><b>$449.98</b><small>84 lb</small></td><td class="r"><b>$559.98</b><small>111 lb</small></td></tr>
     </tbody>
   </table>
-  <p class="note">Cut from 10' wide commercial EPDM rubber. Pick up in York, PA, or order online. Crews ordering 10 or more, ask about crew pricing.</p>
+  <p class="note">Cut from 10' wide commercial EPDM rubber. Pick up in York, PA, or <b>call for shipping</b> at (717) 577-5300. Crews ordering 10 or more, ask about crew pricing.</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap"><div class="faq">
@@ -220,14 +253,15 @@
   <details><summary>Which weight should I get?</summary><p>Pro .045 is good for most jobs and is easier to carry. Heavy Duty .060 is thicker and heavier, so it grips harder and stands up to more abuse. Pros who are on a job every day usually go Heavy Duty.</p></details>
   <details><summary>What is it made of?</summary><p>EPDM, the commercial rubber membrane used on flat roofs. It's made to sit outside in sun and weather for decades.</p></details>
   <details><summary>How do I clean it?</summary><p>Wipe it down or hose it off, let it dry, and roll it up for the next job.</p></details>
-  <details><summary>Can I pick it up?</summary><p>Yes. Pick up in York, PA. Call or text to set a time.</p></details>
+  <details><summary>Can I pick it up, or do you ship?</summary><p>Both. Pick up in York, PA, or call (717) 577-5300 for shipping and we'll quote the freight to your door.</p></details>
+  <details><summary>Can you put my company name on it?</summary><p>Yes. We print your business name, logo or website down the runner in white or yellow. Every time a client walks your runner, they see who's taking care of their floors. Call for custom pricing.</p></details>
   <details><summary>Do you do bigger sizes?</summary><p>Yes. Drops come off a 10' wide roll, so 10' x 15', 10' x 20' and longer can be cut to order.</p></details>
 </div></div></section>
 
 <section class="contact" id="order"><div class="wrap">
   <h2>Order or ask about crew pricing</h2>
   <p>Call or text (717) 577-5300. Painting crews and contractors ordering 10 or more, ask about crew pricing.</p>
-  <a class="btn" href="tel:+17175775300">Call / text to order</a>
+  <a class="btn" href="tel:+17175775300">Call / text to order</a> <a class="btn ghost" href="tel:+17175775300">Call for shipping</a>
 </div></section>
 
 <footer>FloorShieldPro.com · Rubber runners and drop cloths · York, PA</footer>
