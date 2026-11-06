@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FloorShieldPro.com | Rubber Runners and Drop Cloths for Pros</title>
+<meta name="description" content="Heavy EPDM rubber runners and drop cloths for painters and contractors. No drips. No slips. No leaks. Pro .045 and Heavy Duty .060.">
+<style>
+  :root { --ink:#151515; --soft:#5d5d5d; --paper:#f4f2ee; --card:#fff; --line:#dedad2; --yellow:#f2b705; --black:#111; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width:1140px; margin:0 auto; padding:0 20px; }
+  img, video { max-width:100%; }
+
+  header { position:sticky; top:0; z-index:10; background:rgba(17,17,17,.94); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); color:#fff; border-bottom:3px solid var(--yellow); }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:18px; }
+  .logo { display:flex; align-items:center; gap:12px; font-weight:900; font-style:italic; font-size:46px; line-height:1; letter-spacing:-.03em; color:#fff; text-decoration:none; text-transform:none; }
+  .logo svg { width:46px; height:52px; flex:none; }
+  .logo small { font-size:.5em; font-style:normal; color:#bbb; font-weight:700; letter-spacing:0; }
+  .logo b { color:var(--yellow); }
+  nav { display:flex; gap:24px; align-items:center; font-size:16px; font-weight:700; }
+  nav a { color:#cfcfcf; text-decoration:none; }
+  nav a:hover { color:#fff; }
+  nav a.call { color:var(--black); background:var(--yellow); font-weight:800; padding:8px 14px; border-radius:6px; white-space:nowrap; }
+  @media (max-width:1100px) { .logo { font-size:34px; } .logo svg { width:34px; height:38px; } }
+  @media (max-width:520px) { .logo { font-size:24px; gap:8px; } .logo svg { width:26px; height:30px; } nav a.call { padding:7px 10px; font-size:14px; } }
+  @media (max-width:760px) { nav a:not(.call) { display:none; } }
+
+  .hero { position:relative; color:#fff; min-height:min(86vh,780px); display:flex; align-items:center; background:#0b0b0b; overflow:hidden; }
+  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:3/2; max-width:100%; background:url(media/hero-fsp-jason2.jpg) 62% center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
+  .hero .wrap { z-index:1; }
+  @media (max-aspect-ratio:3/2) { .hero::after { left:0; width:100%; aspect-ratio:auto; -webkit-mask-image:none; mask-image:none; } }
+  .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 60%); z-index:1; }
+  .hero .wrap { position:relative; width:100%; padding-top:70px; padding-bottom:70px; }
+  .tag { display:inline-block; background:var(--yellow); color:var(--black); font-weight:900; font-size:12px; letter-spacing:.14em; text-transform:uppercase; padding:5px 10px; border-radius:3px; margin-bottom:18px; }
+  .hero h1 { font-size:clamp(42px,6.6vw,80px); line-height:.98; margin:0 0 18px; letter-spacing:-.035em; max-width:11ch; }
+  .hero h1 span { color:var(--yellow); }
+  .hero .punch { font-size:clamp(20px,2.4vw,28px); font-weight:800; margin:0 0 14px; color:#fff; }
+  .hero p { font-size:19px; color:#d6d6d6; max-width:44ch; margin:0 0 28px; }
+  .btn { display:inline-block; background:var(--yellow); color:var(--black); font-weight:800; text-decoration:none; padding:14px 24px; border-radius:7px; margin-right:10px; }
+  .btn.ghost { background:rgba(0,0,0,.35); color:#fff; border:2px solid #777; }
+  .hero-facts { display:flex; flex-wrap:wrap; gap:10px; margin-top:38px; }
+  .hero-facts span { border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.35); padding:7px 12px; border-radius:99px; font-size:14px; color:#e6e6e6; }
+  @media (max-width:760px) {
+    .hero { min-height:auto; }
+    .hero::before { background:linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.92) 100%); }
+    .btn { display:block; margin:0 0 10px; text-align:center; }
+  }
+
+  section { padding:72px 0; }
+  h2 { font-size:clamp(28px,3.6vw,38px); letter-spacing:-.02em; margin:0 0 8px; }
+  .lede { color:var(--soft); margin:0 0 32px; max-width:62ch; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+
+  .weights { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .weight { background:#fff; border:2px solid var(--line); border-radius:14px; padding:28px; position:relative; }
+  .weight.hd { background:var(--black); color:#fff; border-color:var(--black); }
+  .weight .gauge { font-size:56px; font-weight:900; letter-spacing:-.04em; line-height:1; }
+  .weight.hd .gauge { color:var(--yellow); }
+  .weight h3 { font-size:24px; margin:10px 0 2px; }
+  .weight .for { font-weight:700; margin:0 0 12px; }
+  .weight.hd .for { color:var(--yellow); }
+  .weight ul { margin:0; padding-left:18px; color:var(--soft); }
+  .weight.hd ul { color:#cfcfcf; }
+  .weight.hd ul b { color:#fff; }
+  .weight .badge { position:absolute; top:18px; right:18px; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:99px; background:var(--paper); color:var(--ink); }
+  .weight.hd .badge { background:var(--yellow); color:var(--black); }
+  @media (max-width:700px) { .weights { grid-template-columns:1fr; } }
+
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; display:flex; flex-direction:column; }
+  .card h3 { margin:0 0 4px; font-size:22px; }
+  .card p { flex:1; }
+  .size { display:inline-block; align-self:flex-start; background:var(--black); color:var(--yellow); font-weight:800; font-size:13px; padding:3px 10px; border-radius:99px; margin-bottom:10px; }
+  .pp { display:grid; grid-template-columns:1fr 1fr; gap:10px; border-top:1px solid var(--line); padding-top:14px; }
+  .pp div { border-radius:10px; padding:10px 12px; background:var(--paper); }
+  .pp div.hd { background:var(--black); color:#fff; }
+  .pp small { display:block; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--soft); }
+  .pp div.hd small { color:var(--yellow); }
+  .pp b { font-size:22px; display:block; }
+  .pp span { font-size:13px; color:var(--soft); }
+  .pp div.hd span { color:#bdbdbd; }
+
+  .proof { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .proof-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; align-items:start; }
+  .proof img, .proof video { width:100%; border-radius:12px; border:1px solid var(--line); display:block; background:#000; }
+  @media (max-width:860px) { .proof-grid { grid-template-columns:1fr; } }
+
+  .why { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px; }
+  .why div { border-top:4px solid var(--yellow); padding-top:14px; }
+  .why strong { display:block; font-size:19px; margin-bottom:4px; }
+
+  .uses { background:var(--black); color:#fff; }
+  .uses .lede { color:#bdbdbd; }
+  .chips { display:flex; flex-wrap:wrap; gap:10px; }
+  .chips span { border:1px solid #444; padding:10px 16px; border-radius:99px; font-weight:600; }
+  .chips span b { color:var(--yellow); }
+
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:16px; }
+  th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; }
+  th { background:var(--black); color:#fff; font-size:13px; text-transform:uppercase; letter-spacing:.06em; }
+  th.hd { color:var(--yellow); }
+  td.r, th.r { text-align:right; }
+  td.r b { font-size:18px; }
+  td.r small { display:block; color:var(--soft); font-size:12px; }
+  .note { color:var(--soft); font-size:14px; margin-top:12px; }
+
+  .faq { max-width:820px; }
+  .faq details { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin-bottom:10px; }
+  .faq summary { font-weight:800; cursor:pointer; }
+  .faq p { margin:10px 0 0; color:var(--soft); }
+
+  .contact { background:#111 url(media/clip-frame-1.jpg) center/cover; color:#fff; text-align:center; position:relative; padding:110px 0; }
+  .contact::before { content:""; position:absolute; inset:0; background:rgba(10,10,10,.85); }
+  .contact .wrap { position:relative; }
+  .contact p { color:#cfcfcf; max-width:54ch; margin:0 auto 26px; }
+  footer { text-align:center; font-size:13px; color:var(--soft); padding:22px 0 40px; }
+  @media (max-width:560px) { th, td { padding:10px 7px; font-size:14px; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 46 52" aria-hidden="true"><path d="M23 2 L43 9 V25 C43 38 34 46 23 50 C12 46 3 38 3 25 V9 Z" fill="#f5b301" stroke="#fff" stroke-width="2"/><path d="M14 26 l7 7 l12 -14" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>FloorShield<b>Pro</b><small>.com</small></span></a>
+  <nav><a href="#weights">Pro vs Heavy Duty</a><a href="#products">Products</a><a href="#proof">See it</a><a href="#pricing">Pricing</a><a class="call" href="tel:+17175775300">(717) 577-5300</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <span class="tag">For painters &amp; contractors</span>
+  <h1>The last ones you'll <span>ever buy.</span></h1>
+  <p class="punch">No drips. No slips. No leaks.</p>
+  <p>Heavy EPDM rubber runners and drop cloths. Lies flat, grips the floor, nothing soaks through, and it wipes clean job after job.</p>
+  <a class="btn" href="#pricing">See pricing</a><a class="btn ghost" href="#order">Order / pickup</a>
+  <div class="hero-facts"><span>2' x 10' runners</span><span>10' x 10' drop cloths</span><span>Pro .045 &amp; Heavy Duty .060</span><span>York, PA pickup</span></div>
+</div></div>
+
+<section id="weights"><div class="wrap">
+  <h2>Pick your weight</h2>
+  <p class="lede">Same rubber, two thicknesses. Pro is the one most crews want. Heavy Duty is for the pros who are on a floor every day and want it to never move.</p>
+  <div class="weights">
+    <div class="weight">
+      <span class="badge">Good for most</span>
+      <div class="gauge">.045</div>
+      <h3>Pro</h3>
+      <p class="for">Good for most jobs and most crews.</p>
+      <ul><li>Lighter to carry, roll and stack</li><li>Runner about 5.6 lb, 10' x 10' drop about 28 lb</li><li>Runner from <b>$39.98</b></li></ul>
+    </div>
+    <div class="weight hd">
+      <span class="badge">For the pros</span>
+      <div class="gauge">.060</div>
+      <h3>Heavy Duty</h3>
+      <p class="for">For the professional contractor or painter.</p>
+      <ul><li>Thicker, heavier, maximum grip and puncture resistance</li><li>Runner about 7.4 lb, 10' x 10' drop about 37 lb</li><li>Runner from <b>$49.98</b></li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="products" style="padding-top:0"><div class="wrap">
+  <h2>Built for the jobsite</h2>
+  <p class="lede">Cut from 10-foot-wide commercial rubber roofing membrane, the same material that sits on flat roofs for decades.</p>
+  <div class="grid">
+    <div class="card"><span class="size">2' x 10'</span><h3>Rubber Runner</h3>
+      <p>Hallways, stairs, doorways and the path from the truck to the room. Heavy enough to stay put without tape.</p>
+      <div class="pp"><div><small>Pro .045</small><b>$39.98</b><span>5.6 lb</span></div><div class="hd"><small>Heavy Duty .060</small><b>$49.98</b><span>7.4 lb</span></div></div></div>
+    <div class="card"><span class="size">10' x 10'</span><h3>Rubber Drop Cloth</h3>
+      <p>Under ladders, scaffolding, mixing stations and paint tables. Spills stay on top. Hose it off and roll it up.</p>
+      <div class="pp"><div><small>Pro .045</small><b>$149.98</b><span>28 lb</span></div><div class="hd"><small>Heavy Duty .060</small><b>$187.98</b><span>37 lb</span></div></div></div>
+    <div class="card"><span class="size">5 + 2</span><h3>Contractor Kit</h3>
+      <p>Five runners and two 10' x 10' drops. Enough to protect a whole interior job from the front door to the back room.</p>
+      <div class="pp"><div><small>Pro .045</small><b>$449.98</b><span>84 lb</span></div><div class="hd"><small>Heavy Duty .060</small><b>$559.98</b><span>111 lb</span></div></div></div>
+  </div>
+</div></section>
+
+<section class="proof" id="proof"><div class="wrap">
+  <h2>See the difference</h2>
+  <p class="lede">A regular drop cloth soaks paint straight into the carpet and slides out from under you on hardwood. Rubber doesn't.</p>
+  <div class="proof-grid">
+    <img src="media/soak-through-comparison.jpg" alt="Canvas drop cloth soaks paint through to the carpet; rubber keeps it on top">
+    <video src="media/slip-clip.mp4" controls muted playsinline preload="metadata" poster="media/clip-frame-2.jpg"></video>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Why rubber</h2>
+  <p class="lede">Canvas and plastic are cheap the first time and expensive every time after.</p>
+  <div class="why">
+    <div><strong>Nothing bleeds through</strong>Paint, primer, mud and water sit on top. Canvas soaks it straight into the floor.</div>
+    <div><strong>Doesn't slide</strong>Rubber grips hardwood, tile and stair treads. No tape, no tripping.</div>
+    <div><strong>Reusable for years</strong>Wipe it, hose it, roll it up. Buy once instead of replacing plastic every job.</div>
+    <div><strong>Works outside</strong>Won't blow away under siding, roofing or masonry work.</div>
+  </div>
+</div></section>
+
+<section class="uses"><div class="wrap">
+  <h2>Where crews put it</h2>
+  <p class="lede">Anywhere you'd tape down plastic or throw a canvas, and a few places you'd never trust them.</p>
+  <div class="chips">
+    <span><b>›</b> Hallways &amp; entries</span><span><b>›</b> Stair runs</span><span><b>›</b> Under ladders</span><span><b>›</b> Paint &amp; mixing tables</span>
+    <span><b>›</b> Truck-to-door path</span><span><b>›</b> Under scaffolding</span><span><b>›</b> Drywall mud stations</span><span><b>›</b> Exterior siding &amp; masonry</span>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Pricing</h2>
+  <p class="lede">Pro .045 is good for most. Heavy Duty .060 is for the professional contractor or painter.</p>
+  <table>
+    <thead><tr><th>Item</th><th class="r">Pro .045</th><th class="r hd">Heavy Duty .060</th></tr></thead>
+    <tbody>
+      <tr><td>Runner 2' x 10'</td><td class="r"><b>$39.98</b><small>5.6 lb</small></td><td class="r"><b>$49.98</b><small>7.4 lb</small></td></tr>
+      <tr><td>Runner 3-pack</td><td class="r"><b>$109.98</b><small>17 lb</small></td><td class="r"><b>$137.98</b><small>22 lb</small></td></tr>
+      <tr><td>Drop cloth 10' x 10'</td><td class="r"><b>$149.98</b><small>28 lb</small></td><td class="r"><b>$187.98</b><small>37 lb</small></td></tr>
+      <tr><td>Drop cloth 10' x 20'</td><td class="r"><b>$279.98</b><small>56 lb</small></td><td class="r"><b>$349.98</b><small>74 lb</small></td></tr>
+      <tr><td>Contractor kit (5 runners + 2 drops)</td><td class="r"><b>$449.98</b><small>84 lb</small></td><td class="r"><b>$559.98</b><small>111 lb</small></td></tr>
+    </tbody>
+  </table>
+  <p class="note">Cut from 10' wide commercial EPDM rubber. Pick up in York, PA, or order online. Crews ordering 10 or more, ask about crew pricing.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="faq">
+  <h2>Questions</h2>
+  <details><summary>Which weight should I get?</summary><p>Pro .045 is good for most jobs and is easier to carry. Heavy Duty .060 is thicker and heavier, so it grips harder and stands up to more abuse. Pros who are on a job every day usually go Heavy Duty.</p></details>
+  <details><summary>What is it made of?</summary><p>EPDM, the commercial rubber membrane used on flat roofs. It's made to sit outside in sun and weather for decades.</p></details>
+  <details><summary>How do I clean it?</summary><p>Wipe it down or hose it off, let it dry, and roll it up for the next job.</p></details>
+  <details><summary>Can I pick it up?</summary><p>Yes. Pick up in York, PA. Call or text to set a time.</p></details>
+  <details><summary>Do you do bigger sizes?</summary><p>Yes. Drops come off a 10' wide roll, so 10' x 15', 10' x 20' and longer can be cut to order.</p></details>
+</div></div></section>
+
+<section class="contact" id="order"><div class="wrap">
+  <h2>Order or ask about crew pricing</h2>
+  <p>Call or text (717) 577-5300. Painting crews and contractors ordering 10 or more, ask about crew pricing.</p>
+  <a class="btn" href="tel:+17175775300">Call / text to order</a>
+</div></section>
+
+<footer>FloorShieldPro.com · Rubber runners and drop cloths · York, PA</footer>
+</body>
+</html>
